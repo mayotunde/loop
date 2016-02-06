@@ -24,7 +24,7 @@ mapLink = '<a href="http://openstreetmap.org">openstreetmap</a>,'+ '<a href="htt
 L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: ' &copy; ' + mapLink,maxZoom: 18}).addTo(map);
 
 
-$.getJSON("oyo.geojson", function(data){
+$.getJSON("https://cdn.rawgit.com/mayotunde/loop/master/oyo.geojson", function(data){
 var layer = L.geoJson(data,{
              onEachFeature: function (feature, layer) {
              layer.bindLabel("State:" + feature.properties.NAME_1, {className: 'label', noHide: true});
