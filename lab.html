@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Leaflet.label</title>
+
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<link rel="stylesheet" href="file:///C:/Users/user/Desktop/New folder (3)/Leaflet.label-master/dist/leaflet.label.css" />
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+	<script src="file:///C:/Users/user/Desktop/New folder (3)/Leaflet.label-master/dist/leaflet.label.js"></script>
+</head>
+<body>
+<style>
+.label {background: #FED976;color:green;}
+</style>
+	<div id="map" style="position: absolute; width: 700px; height: 500px"></div>
+	
+	<script>
+		
+		var map = L.map('map').setView([9.65, 7.00], 5);
+	mapLink = '<a href="http://openstreetmap.org">openstreetmap</a>,'+ '<a href="http://mapsnigeriainitiative.wordpress.com">mapsnigeriainitiative</a>';
+	L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: ' &copy; ' + mapLink,maxZoom: 18}).addTo(map);
+
+		
+		
+
+		L.marker([10.785, 5.263], {draggable:true}).bindLabel('Point A!', { noHide: true })
+			.addTo(map)
+			.showLabel();
+
+		L.circleMarker([8.56, 9.20]).bindLabel("Point B",{direction: 'Left', noHide: true}).addTo(map).showLabel();
+		
+		var icon = L.icon({ iconUrl:'file:///C:/Users/user/Desktop/New folder (3)/Leaflet.label-master/ambulance.png',
+				iconSize: [40, 40] });
+		L.marker([6.000, 8.119], {icon: icon }).bindLabel('Accident Point')
+			.addTo(map)
+			.showLabel();
+		
+
+		L.polygon([[6.000, 8.200],[8.90, 9.20],[10.785, 5.700]], {fillColor: '#eeeee', weight: 1, color: 'black'}).bindLabel('incidence triangle', {className: 'label'}).addTo(map);
+		L.polyline([[6.000, 8.119],[8.56, 9.20],[10.785, 5.263]], {color: '#813', weight: 3, dashArray: '5'}).bindLabel('route to hospital').addTo(map);	
+
+	</script>
+</body>
+</html>

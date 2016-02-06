@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Leaflet.label</title>
+
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<!--[if lte IE 8]><link rel="stylesheet" href="leaflet.ie.css" /><![endif]-->
+	<link rel="stylesheet" href="file:///C:/Users/user/Desktop/New folder (3)/Leaflet.label-master/dist/leaflet.label.css" />
+	
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+	<script src="file:///C:/Users/user/Desktop/New folder (3)/Leaflet.label-master/dist/leaflet.label.js"></script>
+	</head>
+<body>
+<style>
+.label {font-weight: 700; text-align: center; margin-top: -lem; }
+.label div {position: relative; left: -50%; }
+</style>
+
+	<div id="map" style="position: absolute; width: 700px; height: 500px"></div>
+	
+	<script>
+		
+		var map = L.map('map').setView([8.65, 7.00], 5);
+	mapLink = '<a href="http://openstreetmap.org">openstreetmap</a>,'+ '<a href="http://mapsnigeriainitiative.wordpress.com">mapsnigeriainitiative</a>';
+	L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: ' &copy; ' + mapLink,maxZoom: 18}).addTo(map);
+
+
+var points = [{
+"type":"Feature","properties":{"x":5.266603333,"y":13.23052555,"name_0":"Nigeria","id_1":2049,"name_1":"Sokoto","region":"NW","ph":6,"cartodb_id":1,"created_at":"2015/06/22","updated_at":"2015/06/22"},"geometry":{"type":"Point","coordinates":[5.266603333,13.23052555]}},{"type":"Feature","properties":{"x":6.3891224,"y":11.62692688,"name_0":"Nigeria","id_1":2053,"name_1":"Zamfara","region":"NW","ph":5,"cartodb_id":2,"created_at":"2015/06/22","updated_at":"2015/06/22"},"geometry":{"type":"Point","coordinates":[6.3891224,11.62692688]}},{"type":"Feature","properties":{"x":6.208717551,"y":10.06341818,"name_0":"Nigeria","id_1":2042,"name_1":"Niger","region":"NC","ph":4,"cartodb_id":3,"created_at":"2015/06/22","updated_at":"2015/06/22"},"geometry":{"type":"Point","coordinates":[6.208717551,10.06341818]}},{"type":"Feature","properties":{"x":5.0661535,"y":9.943148283,"name_0":"Nigeria","id_1":2042,"name_1":"Niger","region":"NC","ph":2,"cartodb_id":4,"created_at":"2015/06/22","updated_at":"2015/06/22"},"geometry":{"type":"Point","coordinates":[5.0661535,9.943148283]}},{"type":"Feature","properties":{"x":6.369077417,"y":9.261618849,"name_0":"Nigeria","id_1":2042,"name_1":"Niger","region":"NC","ph":2,"cartodb_id":5,"created_at":"2015/06/22","updated_at":"2015/06/22"},"geometry":{"type":"Point","coordinates":[6.369077417,9.261618849]}},{"type":"Feature","properties":{"x":7.9526311,"y":9.642473533,"name_0":"Nigeria","id_1":2034,"name_1":"Kaduna","region":"NW","ph":2,"cartodb_id":6,"created_at":"2015/06/22","updated_at":"2015/06/22"},"geometry":{"type":"Point","coordinates":[7.9526311,9.642473533]}},{"type":"Feature","properties":{"x":7.611866384,"y":10.5244528,"name_0":"Nigeria","id_1":2034,"name_1":"Kaduna","region":"NW","ph":2,"cartodb_id":7,"created_at":"2015/06/22","updated_at":"2015/06/22"},"geometry":{"type":"Point","coordinates":[7.611866384,10.5244528]}},{"type":"Feature","properties":{"x":8.433710701,"y":11.66701685,"name_0":"Nigeria","id_1":2035,"name_1":"Kano","region":"NW","ph":7,"cartodb_id":8,"created_at":"2015/06/22","updated_at":"2015/06/22"},"geometry":{"type":"Point","coordinates":[8.433710701,11.66701685]}},{"type":"Feature","properties":{"x":9.556229767,"y":12.0879615,"name_0":"Nigeria","id_1":2033,"name_1":"Jigawa","region":"SE","ph":9,"cartodb_id":9,"created_at":"2015/06/22","updated_at":"2015/06/22"},"geometry":{"type":"Point","coordinates":[9.556229767,12.0879615]}},{"type":"Feature","properties":{"x":10.5985689,"y":11.68706183,"name_0":"Nigeria","id_1":2020,"name_1":"Bauchi","region":"NE","ph":7,"cartodb_id":10,"created_at":"2015/06/22","updated_at":"2015/06/22"},"geometry":{"type":"Point","coordinates":[10.5985689,11.68706183]}},{"type":"Feature","properties":{"x":10.19766923,"y":10.30395798,"name_0":"Nigeria","id_1":2020,"name_1":"Bauchi","region":"NE","ph":7,"cartodb_id":11,"created_at":"2015/06/22","updated_at":"2015/06/22"},"geometry":{"type":"Point","coordinates":[10.19766923,10.30395798]}},{"type":"Feature","properties":{"x":9.295644984,"y":10.54449778,"name_0":"Nigeria","id_1":2020,"name_1":"Bauchi","region":"NE","ph":7,"cartodb_id":12,"created_at":"2015/06/22","updated_at":"2015/06/22"},"geometry":{"type":"Point","coordinates":[9.295644984,10.54449778]}},{"type":"Feature","properties":{"x":9.57627475,"y":9.001034067,"name_0":"Nigeria","id_1":2047,"name_1":"Plateau","region":"NC","ph":5,"cartodb_id":13,"created_at":"2015/06/22","updated_at":"2015/06/22"},"geometry":{"type":"Point","coordinates":[9.57627475,9.001034067]}},{"type":"Feature","properties":{"x":9.055105183,"y":9.4420237,"name_0":"Nigeria","id_1":2047,"name_1":"Plateau","region":"NC","ph":5,"cartodb_id":14,"created_at":"2015/06/22","updated_at":"2015/06/22"},"geometry":{"type":"Point","coordinates":[9.055105183,9.4420237]}},{"type":"Feature","properties":{"x":8.393620734,"y":8.499909483,"name_0":"Nigeria","id_1":2041,"name_1":"Nassarawa","region":"NC","ph":5,"cartodb_id":15,"created_at":"2015/06/22","updated_at":"2015/06/22"},"geometry":{"type":"Point","coordinates":[8.393620734,8.499909483]}},{"type":"Feature","properties":{"x":8.714340467,"y":7.317255466,"name_0":"Nigeria","id_1":2022,"name_1":"Benue","region":"NC","ph":5,"cartodb_id":16,"created_at":"2015/06/22","updated_at":"2015/06/22"},"geometry":{"type":"Point","coordinates":[8.714340467,7.317255466]}},{"type":"Feature","properties":{"x":8.714340467,"y":6.234826366,"name_0":"Nigeria","id_1":2024,"name_1":"Cross River","region":"SS","ph":5,"cartodb_id":17,"created_at":"2015/06/22","updated_at":"2015/06/22"},"geometry":{"type":"Point","coordinates":[8.714340467,6.234826366]}},{"type":"Feature","properties":{"x":10.29789415,"y":8.038874867,"name_0":"Nigeria","id_1":2050,"name_1":"Taraba","region":"NE","ph":10,"cartodb_id":18,"created_at":"2015/06/22","updated_at":"2015/06/22"},"geometry":{"type":"Point","coordinates":[10.29789415,8.038874867]}},{"type":"Feature","properties":{"x":11.34023328,"y":7.377390417,"name_0":"Nigeria","id_1":2050,"name_1":"Taraba","region":"NE","ph":10,"cartodb_id":19,"created_at":"2015/06/22","updated_at":"2015/06/22"},"geometry":{"type":"Point","coordinates":[11.34023328,7.377390417]}},{"type":"Feature","properties":{"x":11.24000837,"y":8.680314333,"name_0":"Nigeria","id_1":2050,"name_1":"Taraba","region":"NE","ph":3,"cartodb_id":20,"created_at":"2015/06/22","updated_at":"2015/06/22"},"geometry":{"type":"Point","coordinates":[11.24000837,8.680314333]}},{"type":"Feature","properties":{"x":12.48279733,"y":9.522203633,"name_0":"Nigeria","id_1":2017,"name_1":"Adamawa","region":"NE","ph":2,"cartodb_id":21,"created_at":"2015/06/22","updated_at":"2015/06/22"},"geometry":{"type":"Point","coordinates":[12.48279733,9.522203633]}},{"type":"Feature","properties":{"x":12.90374198,"y":10.94539745,"name_0":"Nigeria","id_1":2023,"name_1":"Borno","region":"NE","ph":2,"cartodb_id":22,"created_at":"2015/06/22","updated_at":"2015/06/22"},"geometry":{"type":"Point","coordinates":[12.90374198,10.94539745]}}];
+
+var layer = L.geoJson(points,{
+                                onEachFeature: function (feature, layer) {
+                                 layer.bindLabel(feature.properties.region, {draggable: true});
+                               }}).addTo(map);
+
+
+</script>
+</body>
+</html>
