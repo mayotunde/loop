@@ -4,9 +4,9 @@
 	<title>Leaflet.label</title>
 
 	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
-	<link rel="stylesheet" href="file:///C:/Users/user/Desktop/New folder (3)/Leaflet.label-master/dist/leaflet.label.css" />
+	<link rel="stylesheet" href="https://cdn.rawgit.com/mayotunde/loop/master/dist/leaflet.label.css" />
 	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-	<script src="file:///C:/Users/user/Desktop/New folder (3)/Leaflet.label-master/dist/leaflet.label.js"></script>
+	<script src="https://cdn.rawgit.com/mayotunde/loop/master/dist/leaflet.label.js"></script>
 </head>
 <body>
 <style>
@@ -29,7 +29,7 @@
 
 		L.circleMarker([8.56, 9.20]).bindLabel("Point B",{direction: 'Left', noHide: true}).addTo(map).showLabel();
 		
-		var icon = L.icon({ iconUrl:'file:///C:/Users/user/Desktop/New folder (3)/Leaflet.label-master/ambulance.png',
+		var icon = L.icon({ iconUrl:'https://cdn.rawgit.com/mayotunde/loop/master/ambulance.png',
 				iconSize: [40, 40] });
 		L.marker([6.000, 8.119], {icon: icon }).bindLabel('Accident Point')
 			.addTo(map)
